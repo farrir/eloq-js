@@ -11,14 +11,16 @@ for (i=1; i<101; i++) {
     let divBy3 = i % 3;
     let divBy5 = i % 5;
 
-    if (divBy3 == 0) {
-        output = "Fizz";
-    } 
-    if (divBy5 == 0) {
-        output = output + "Buzz";
-    }
-    if (divBy3 != 0 && divBy5 != 0) {
-        output = i;
+    if (divBy3 == 0 && divBy5 == 0) {
+        output = "FizzBuzz";
+    } else {
+        if (divBy3 == 0) {
+            output = "Fizz";
+        } else if (divBy5 == 0) {
+            output = output + "Buzz";
+        } else {
+            output = i;
+        }
     }
     console.log(output);
 }
